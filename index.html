@@ -195,7 +195,49 @@
         </div>
       </div>
       <div class="col-md-4 col-lg-3 col-12">
-        
+        <div id="selections" class="row row-cols-1 g-4">
+          <div class="col">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-body">
+                <h5 class="card-title text-center">Your Selection</h5>
+                <hr class="border border-warning border-2 opacity-100" />
+                <ol id="selected-players">
+
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-body">
+                <h5 class="card-title text-center">Budget</h5>
+                <hr class="border border-warning border-2 opacity-100" />
+                <p class="d-flex justify-content-between mt-2">
+                  <span>Per Player:</span>
+                  <input id="perPlayerCost" class="text-white bg-secondary w-50" type="text" />
+                </p>
+                <button id="calculate" class="btn btn-primary w-100">Calculate</button>
+                <p class="d-flex justify-content-between mt-2">
+                  <span>Player Expenses: $</span>
+                  <span id="totalPlayerExpense">00</span>
+                </p>
+                <p class="d-flex justify-content-between mt-2">
+                  <span>Manager:</span>
+                  <input id="manager" class="text-white bg-secondary w-50" type="text" />
+                </p>
+                <p class="d-flex justify-content-between mt-2">
+                  <span>Coach:</span>
+                  <input id="coach" class="text-white bg-secondary w-50" type="text" />
+                </p>
+                <button id="totalCalculate" class="btn btn-primary w-100 ">Calculate Total</button>
+                <p class="d-flex justify-content-between mt-2">
+                  <span>Total Expenses:$ </span>
+                  <span id="allTotalExpenses">00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
