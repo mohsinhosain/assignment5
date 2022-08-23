@@ -19,3 +19,25 @@ for (const btn of btnSubmit) {
         }
     })
 }
+
+document.getElementById("calculate").addEventListener("click", function () {
+
+
+    const selectedPlayersExpenses = document.getElementById("totalPlayerExpense");
+    const totalExpense = totalExpenses()
+    selectedPlayersExpenses.innerText = totalExpense
+
+})
+function totalExpenses() {
+    const perPlayerCost = parseInt(document.getElementById("perPlayerCost").value)
+    const allSelectedPlayers = document.querySelectorAll("#selected-players li").length
+    const totalExp = perPlayerCost * allSelectedPlayers
+    return totalExp;
+}
+
+document.getElementById("totalCalculate").addEventListener('click', function () {
+    const manager = parseInt(document.getElementById("manager").value)
+    const coach = parseInt(document.getElementById("coach").value)
+    const allTotal = totalExpenses() + manager + coach;
+    document.getElementById("allTotalExpenses").innerText = allTotal
+})
